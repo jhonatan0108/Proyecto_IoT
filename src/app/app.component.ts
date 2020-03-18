@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Inicio',
+      url: '/home/Index',
+      icon: 'home'
     },
     {
       title: 'Outbox',
@@ -65,5 +65,9 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+    // const pathH = window.location.pathname.split('home/')[1];
+    // if (pathH !== undefined) {
+    //   this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === pathH.toLowerCase());
+    // }
   }
 }

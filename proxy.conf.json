@@ -1,0 +1,8 @@
+{
+
+"/api/InsLog/*":{
+  "target":"http://localhost:58137/", 
+  "secure":false,
+  "changeOrigin":true
+}
+}

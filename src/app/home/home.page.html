@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <ion-card class="container ">
+      <br />
+      <section>
+        <header>Para enviar la señal por favor oprima el botón.</header>
+        <br />
+        <ion-button (click)="enviarStatus(true)" expand="block">
+          <ion-icon name="checkmark-done-outline"></ion-icon>
+          &nbsp; Enviar Señal
+        </ion-button>
+        <br />
+        <br />
+        <ion-note>Para apagar la señal</ion-note>
+        <br />
+        <ion-button (click)="enviarStatus(false)" expand="block" color="danger">
+          <ion-icon name="alert-outline"></ion-icon>
+          &nbsp; dejar Señal
+        </ion-button>
+      </section>
+      <br />
+    </ion-card>
+    <br />
+    <!-- <p *ngIf="_response.Response" >
+       <button [swal]="deleteSwal">Delete {{ file.name }}</button>     </p> -->
+  </div>
+</ion-content>
